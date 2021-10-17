@@ -1,0 +1,114 @@
+/* Font */
+/* Bai Jamjuree (400, 600)*/
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+/* Variables */
+/* Colors - primary */
+$strong-cyan: hsl(171, 66%, 44%);
+$light-blue: hsl(233, 100%, 69%);
+
+/* Colors - neutral */
+$dark-grayish-blue: hsl(210, 10%, 33%);
+$grayish-blue: hsl(201, 11%, 66%);
+
+/* Breakpoints */
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+/* Mixins */
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Mixins - media queries */
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 10px;
+    font-family: "Bai Jamjuree", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1rem;
+
+    @include tablet {
+        font-size: 1.2rem;
+    }
+
+    @include desktop {
+        font-size: 1.4rem;
+    }
+}
+
+h1,
+h2,
+h3 {
+    color: $dark-grayish-blue;
+    font-size: 1.4rem;
+
+    @include tablet {
+        font-size: 1.6rem;
+    }
+
+    @include desktop {
+        font-size: 1.8rem;
+    }
+}
+
+p {
+    color: $grayish-blue;
+    line-height: 1.5;
+    font-size: 1rem;
+
+    @include tablet {
+        font-size: 1.2rem;
+    }
+
+    @include desktop {
+        font-size: 1.4rem;
+    }
+}
+
+ul>li {
+    display: block;
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+section {
+    margin: 4rem 0;
+
+    @include desktop {
+        margin: 0 0 10rem 0;
+    }
+}
+
+footer {
+    margin-top: 3rem;
+}
