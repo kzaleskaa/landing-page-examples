@@ -1,0 +1,292 @@
+/* Header*/
+.header {
+    min-height: 70vh;
+    background-image: url("/images/bg-header-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    @include desktop {
+        min-height: auto;
+        background-image: url("/images/bg-header-desktop.png");
+        padding-bottom: 10rem
+    }
+
+    &__container {
+        @include flex-column;
+
+        @include tablet {
+            width: 60%;
+        }
+
+        @include desktop {
+            max-width: 50rem;
+        }
+
+    }
+
+    &__logo {
+        padding: 2rem;
+        cursor: pointer;
+
+        @include desktop {
+            padding: 6rem 0 4rem 0;
+        }
+    }
+
+    &__text {
+        margin: 1rem 0;
+    }
+
+    &__button {
+        width: 100%;
+    }
+}
+
+/* Snippets section */
+.snippets {
+    &__container {
+        @include flex-column;
+
+        @include desktop {
+            max-width: 144rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas: "intro intro""desktop cards";
+        }
+    }
+
+    &__text-container {
+        @include desktop {
+            grid-area: intro;
+            max-width: 50rem;
+            margin: 0 auto 2rem auto;
+        }
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+    }
+
+    &__image-container {
+        margin: 2rem auto;
+
+        @include desktop {
+            grid-area: desktop;
+            margin: 0;
+        }
+    }
+
+    &__benefits {
+        @include desktop {
+            grid-area: cards;
+            margin-left: 1rem;
+            text-align: left;
+            max-width: 30rem;
+        }
+    }
+
+    &__card:not(:last-child) {
+        margin-bottom: 1rem;
+
+        @include desktop {
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+/* Access section */
+.access {
+    &__container {
+        @include flex-column;
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+
+        @include desktop {
+            max-width: 50rem;
+        }
+    }
+
+    &__text-container {
+        margin-bottom: 2rem;
+
+        @include desktop {
+            max-width: 50rem;
+        }
+    }
+
+    &__image-container {
+        margin: 2rem auto;
+
+        @include desktop {
+            max-width: 50rem;
+        }
+    }
+
+    &__info {
+        @include desktop {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__cards-container {
+        @include desktop {
+            max-width: 144rem;
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &__card {
+        margin: 2rem 0;
+        display: grid;
+        grid-template-rows: 4rem 3rem 1fr;
+
+        @include desktop {
+            margin: 0;
+            width: 33%;
+            grid-template-rows: 5rem 4rem 1fr;
+        }
+    }
+
+    &__card:not(:last-child) {
+        @include desktop {
+            margin-right: 2rem;
+        }
+    }
+
+    &__card-img {
+        margin: 0 auto;
+
+        @include desktop {
+            align-self: center;
+        }
+    }
+
+    &__card-title {
+        @include desktop {
+            line-height: 4rem;
+        }
+    }
+
+    &__card:first-child {
+        margin-top: 2rem;
+
+        @include desktop {
+            margin-top: 0;
+        }
+    }
+}
+
+/* Companies section */
+.companies {
+    &__list {
+        @include flex-column;
+
+        @include desktop {
+            max-width: 144rem;
+            flex-direction: row;
+            justify-content: center;
+            margin: 7rem auto;
+        }
+    }
+
+    &__logo {
+        margin: 1rem 0;
+
+        @include desktop {
+            padding: 1rem;
+            margin: 0;
+
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+    }
+}
+
+/* Download section */
+.download {
+    margin-bottom: 6rem;
+
+    @include desktop {
+        margin-bottom: 10rem;
+    }
+
+    &__container {
+        @include flex-column;
+
+        @include desktop {
+            max-width: 50rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+    }
+
+    &__button {
+        width: 100%;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: rgba($grayish-blue, 0.15);
+    padding: 1.2rem 0;
+
+    &__container {
+        @include flex-column;
+
+        @include desktop {
+            max-width: 144rem;
+            display: grid;
+            grid-template-columns: 7rem auto auto;
+        }
+    }
+
+    &__logo {
+        width: 5rem;
+        height: 5rem;
+        margin: 2rem 0;
+        cursor: pointer;
+    }
+
+    &__socials {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+
+        @include desktop {
+            text-align: right;
+            margin-top: 0;
+        }
+    }
+
+    &__social {
+        @include desktop {
+            transition: .4s;
+            cursor: pointer;
+
+            &:hover {
+                &>path {
+                    fill: $strong-cyan;
+                }
+
+                transform: scale(110%);
+            }
+        }
+    }
+
+    &__social-link:not(:last-child) {
+        margin-right: 1rem;
+    }
+
+    &__social-path {
+        transition: .4s;
+    }
+}
