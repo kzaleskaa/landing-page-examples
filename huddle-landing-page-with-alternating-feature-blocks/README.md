@@ -1,9 +1,9 @@
-<h1 align="center">Meet landing page 
+<h1 align="center">Huddle landing page 
 </h1>
 
 <div align="center">
     <img src="https://user-images.githubusercontent.com/62251989/140582641-3a68e8f7-141a-45c4-b4d9-6b3801b8fabd.png">
-    <p>🔗 Live Site URL:<a href="https://huddle-landing-page-kzaleskaa.netlify.app/"> Meet landing page</a></p>
+    <p>🔗 Live Site URL:<a href="https://huddle-landing-page-kzaleskaa.netlify.app/"> Huddle landing page</a></p>
 </div>
 
 ## The challenge
