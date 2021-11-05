@@ -57,7 +57,7 @@ a {
   width: 90px;
   height: 27px;
   margin: 0 auto;
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--very-dark-cyan);
   background-color: white;
@@ -122,7 +122,7 @@ a {
 }
 
 .header__main-illustration {
-  max-width: 690px;
+  max-width: 100%;
   margin: 53px auto 0 auto;
 }
 
@@ -150,7 +150,7 @@ a {
 
 .community {
   margin: 20px auto 0px auto;
-  padding: 40px 0px 40px 0px;
+  padding: 40px 8px 40px 8px;
   max-width: 800px;
   text-align: center;
   transform: translateY(-60%);
@@ -270,7 +270,6 @@ a {
   .button {
     width: 200px;
     height: 50px;
-    font-size: 16px;
   }
 
   .button--pink {
