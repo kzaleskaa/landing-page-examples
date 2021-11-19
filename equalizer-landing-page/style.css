@@ -274,10 +274,13 @@ h2 {
     line-height: 52px;
   }
 
-  .wrapper,
   body {
     margin: 0 auto;
     max-width: 1440px;
+  }
+  .wrapper {
+    margin: 0 auto;
+    max-width: 1220px;
   }
 
   .body {
